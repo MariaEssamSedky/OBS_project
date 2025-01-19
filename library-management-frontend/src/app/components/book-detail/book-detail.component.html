@@ -1,0 +1,20 @@
+
+<div *ngIf="book">
+  <label>Title</label><br>
+  <input [(ngModel)]="book.title" /><br /><hr>
+
+  <label>Description:</label><br>
+  <textarea [(ngModel)]="book.description"></textarea><br /><hr>
+
+  <label>Borrowed</label><br>
+  <input type="checkbox" [(ngModel)]="book.borrowed" /><br>
+
+  <label>Borrowed Date:</label><br>
+  <input type="date" [(ngModel)]="book.borrowedDate" /><br /><hr>
+
+  <label>Author:</label><br>
+  <span>{{ book.author?.name }}</span><br /><br /><hr>
+
+  <button (click)="updateBook()">Update</button>&nbsp;&nbsp;
+  <button (click)="deleteBook()">Delete</button>
+</div>

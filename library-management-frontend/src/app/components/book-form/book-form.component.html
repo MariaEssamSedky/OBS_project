@@ -1,0 +1,23 @@
+<div class="c">
+  <label>Title</label><br>
+  <input [(ngModel)]="book.title" /><br /><hr>
+
+  <label>Description</label><br>
+  <textarea [(ngModel)]="book.description"></textarea><br /><hr>
+
+  <label>Borrowed?</label>
+  <input type="checkbox" [(ngModel)]="book.borrowed" /><br />
+
+  <div *ngIf="book.borrowed">
+    <label>Borrowed Date:</label>
+    <input type="date" [(ngModel)]="book.borrowedDate" /><br />
+  </div><hr>
+</div>
+
+<div class="x">
+  <label>Author Name</label>
+  <input [(ngModel)]="book.author!.name" /><br /><hr>
+  <label>Author Bio (optional):</label>
+  <textarea [(ngModel)]="book.author!.bio"></textarea><br />
+  <button (click)="saveBook()">Save</button>
+</div>

@@ -1,0 +1,39 @@
+<h2>Book List</h2>
+<div>
+  <input [(ngModel)]="searchTerm" placeholder="Search by title or author name" />
+  <button (click)="search()">Search</button>
+</div>
+
+<button class="b" [routerLink]="['/books', 'add']">Add Book</button>
+
+<table>
+  <thead>
+    <tr>
+      <!-- <th>Cover</th> -->
+      <th>Title</th>
+      <th>Author</th>
+      <th>Borrowed?</th>      
+      <th>Borrowed Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody align="middle">
+    <tr *ngFor="let book of books"[ngClass]="{'overdue': isOverdue(book)}">
+      <!-- <td>
+        <img [src]="book.imageUrl" alt="Cover" width="50" height="70" />
+      </td> -->
+      <td>
+        <a [routerLink]="['/books', book.id]">{{ book.title }}</a>
+      </td>
+      <td>{{ book.author?.name }}</td>
+      <td>{{ book.borrowed ? 'Yes' : 'No' }}</td>
+      <td>
+        <span *ngIf="book.borrowed">{{ book.borrowedDate }}</span>
+      </td>
+      <td>
+        <button *ngIf="book.id" (click)="deleteBook(book.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

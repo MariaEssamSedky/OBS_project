@@ -1,0 +1,79 @@
+.overdue {
+    background-color: rgb(196, 255, 196); 
+  }
+ 
+
+h2 {
+  text-align: center; 
+  background-color: #f9f9f9; 
+  color: 333; 
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-family: "Georgia", serif; 
+}
+
+
+div input {
+  padding: 8px;
+  width: 700px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  margin-right: 10px;
+  margin-left: 300px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4caf50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+
+table {
+  width: 80%; 
+  border-collapse: collapse; 
+  margin: 0 auto; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size:larger;
+  
+  
+
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Light border */
+  text-align: center; /* Center align text */
+  padding: 10px; /* Add padding */
+}
+
+th {
+  background-color: #f4f4f4; /* Light gray background for headers */
+  font-weight: bold;
+}
+
+/* Highlight rows on hover */
+tr:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+.b{
+  margin-bottom: 20px;
+  margin-left:300px ;
+  width: 700px;
+  text-align: middle;
+  padding: 0.9%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
